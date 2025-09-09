@@ -19,14 +19,19 @@ int main(){
             printf("First Class");
             break;
         case 6:
+            printf("Second Class\n");
+            break;
         case 5:
-            printf("Average Performance.\n");
+            printf("Third Class\n");
             break;
         case 4:
-            printf("Pass, but needs improvement.\n");
+        case 3:
+        case 2:
+        case 1:
+            printf("Not qualified\n");
             break;
         default:
-            printf("Fail.\n");
+            printf("Error\n");
             break;
     }
 
