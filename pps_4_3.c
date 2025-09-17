@@ -1,21 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int num, sum, digit, temp;
+    int num, rev = 0;
+    printf("Enter a 6-digit number: ");
+    scanf("%d", &num);
 
-    printf("Armstrong numbers from 1 to 1000 are:\n");
-    for (num = 1; num <= 1000; num++) {
-        sum = 0;
-        temp = num;
-
-        while (temp > 0) {
-            digit = temp % 10;
-            sum += digit * digit * digit;
-            temp /= 10;
-        }
-
-        if (sum == num)
-            printf("%d ", num);
+    while (num > 0) {
+        rev = rev * 10 + num % 10;
+        num /= 10;
     }
+
+    printf("Reversed number: %d\n", rev);
     return 0;
 }
